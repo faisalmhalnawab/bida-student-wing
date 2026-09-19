@@ -3873,3 +3873,57 @@ textarea:focus-visible {
     flex-direction:column;
   }
 }
+
+
+/* ===== Live calendar cards ===== */
+.live-events-section {
+  padding-bottom:20px;
+}
+
+.live-event-grid {
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:12px;
+}
+
+.live-event-grid article {
+  min-height:220px;
+  padding:22px;
+  display:flex;
+  flex-direction:column;
+  border:1px solid var(--line);
+  border-radius:18px;
+  background:white;
+}
+
+.live-event-grid time {
+  color:var(--teal);
+  font-size:.68rem;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  font-weight:850;
+}
+
+.live-event-grid h3 {
+  margin:auto 0 8px;
+  font-size:1.45rem;
+  line-height:1.08;
+  letter-spacing:-.035em;
+}
+
+.live-event-grid p {
+  margin:0;
+  color:var(--muted);
+  font-size:.84rem;
+}
+
+.live-event-grid a {
+  margin-top:16px;
+  color:var(--navy-900);
+  font-size:.75rem;
+  font-weight:850;
+}
+
+@media (max-width:760px) {
+  .live-event-grid { grid-template-columns:1fr; }
+}
