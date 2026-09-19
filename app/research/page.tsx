@@ -1,4 +1,10 @@
+import type { Metadata } from "next";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Research",
+  description: "Explore the BIDA Student Wing National Research Department, research pathway, training and future project opportunities.",
+};
 
 const pathway = [
   ["Idea & triage", "Relevance, feasibility, duplication and supervisor capacity", "Approved concept note"],
