@@ -18,7 +18,7 @@ const routes = [
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = "https://bida-student-wing.vercel.app";
 
-  return routes.map((route, index) => ({
+  return routes.map((route, index): MetadataRoute.Sitemap[number] => ({
     url: `${base}${route}`,
     lastModified: new Date(),
     changeFrequency: index === 0 ? "weekly" : "monthly",
