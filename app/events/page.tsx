@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { getUpcomingEvents } from "@/lib/calendar";
 
 export const metadata: Metadata = {
   title: "Events",
@@ -15,20 +14,7 @@ const milestones = [
   { date: "06 MAY 2027", type: "National Teaching", title: "Clinical schedule concludes", body: "The adopted working schedule concludes with Acute & Emergency Medicine." },
 ];
 
-function formatEventDate(value: string, allDay: boolean) {
-  const date = new Date(allDay ? `${value}T12:00:00Z` : value);
-  return new Intl.DateTimeFormat("en-GB", {
-    timeZone: "Europe/London",
-    day: "2-digit",
-    month: "short",
-    year: "numeric",
-    ...(allDay ? {} : { hour: "2-digit", minute: "2-digit" }),
-  }).format(date);
-}
-
-export default async function EventsPage() {
-  const liveEvents = await getUpcomingEvents();
-
+export default function EventsPage() {
   return (
     <>
       <section className="programme-page-hero events-page-hero">
@@ -45,45 +31,15 @@ export default async function EventsPage() {
             <span className="status-dot"><i /></span>
             <div>
               <span>Calendar status</span>
-              <strong>{liveEvents.length > 0 ? "Live shared calendar connected" : "Shared live calendar integration is next"}</strong>
+              <strong>Shared live calendar integration is next</strong>
               <p>
-                {liveEvents.length > 0
-                  ? "Upcoming events below are pulled from the configured BIDA Student Wing calendar."
-                  : "The public interface is ready. The final shared calendar source will be connected once the team access route is confirmed."}
+                The public interface is ready. The final shared calendar source
+                will be connected once the team access route is confirmed.
               </p>
             </div>
           </div>
         </div>
       </section>
-
-      {liveEvents.length > 0 && (
-        <section className="section shell live-events-section">
-          <div className="section-heading">
-            <div>
-              <span className="eyebrow">Upcoming events</span>
-              <h2>Live from the shared calendar.</h2>
-            </div>
-            <p>
-              Calendar changes are reflected automatically after the short
-              website cache refresh.
-            </p>
-          </div>
-          <div className="live-event-grid">
-            {liveEvents.map((event) => (
-              <article key={event.id}>
-                <time>{formatEventDate(event.start, event.allDay)}</time>
-                <h3>{event.title}</h3>
-                {event.location && <p>{event.location}</p>}
-                {event.htmlLink && (
-                  <a href={event.htmlLink} target="_blank" rel="noreferrer">
-                    Event details ↗
-                  </a>
-                )}
-              </article>
-            ))}
-          </div>
-        </section>
-      )}
 
       <section className="section shell">
         <div className="events-toolbar">
