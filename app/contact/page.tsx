@@ -1,9 +1,15 @@
+import type { Metadata } from "next";
 const routes = [
   ["General enquiries", "Student Wing organisation, national programmes and general questions."],
   ["National Teaching", "Clinical UKMLA, OSCE, pre-clinical teaching and faculty enquiries."],
   ["National Conference", "Programme, speakers, abstracts, delegate and partnership enquiries."],
   ["Research", "Projects, supervision, research training and research-opportunity enquiries."],
 ];
+
+export const metadata: Metadata = {
+  title: "Contact",
+  description: "Contact routes for BIDA Student Wing national teaching, conference, research and general enquiries.",
+};
 
 export default function ContactPage() {
   return (
