@@ -60,6 +60,40 @@ export default function ResearchPage() {
         </div>
       </section>
 
+      <section className="section shell research-projects-section" id="projects">
+        <div className="section-heading">
+          <div>
+            <span className="eyebrow">Project portfolio</span>
+            <h2>Projects will be published with the information students need to decide fairly.</h2>
+          </div>
+          <p>
+            The public portfolio opens once supervisors, governance and project
+            capacity are confirmed. Each listing will use the same minimum standard.
+          </p>
+        </div>
+
+        <div className="project-empty-state">
+          <div>
+            <span className="project-status-dot"><i /></span>
+            <span className="eyebrow">Portfolio status</span>
+            <h3>No project is being advertised before it is ready.</h3>
+            <p>
+              Research Department delivery is targeted for February 2027.
+              Approved projects will appear here as they become available.
+            </p>
+          </div>
+
+          <div className="project-listing-standard">
+            <div><span>01</span><strong>Named supervisor</strong></div>
+            <div><span>02</span><strong>Scope & method</strong></div>
+            <div><span>03</span><strong>Eligibility</strong></div>
+            <div><span>04</span><strong>Milestones</strong></div>
+            <div><span>05</span><strong>Contributor expectations</strong></div>
+            <div><span>06</span><strong>Application deadline</strong></div>
+          </div>
+        </div>
+      </section>
+
       <section className="research-pathway-section" id="pathway">
         <div className="shell">
           <div className="section-heading">
