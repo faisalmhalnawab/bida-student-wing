@@ -126,6 +126,36 @@ export default function ConferencePage() {
         </div>
       </section>
 
+      <section className="conference-registration-section">
+        <div className="shell registration-layout">
+          <div>
+            <span className="eyebrow light">Delegate registration</span>
+            <h2>The registration journey is already designed.</h2>
+            <p>
+              Once the conference date and programme are approved, this section
+              can be connected to the registration database and automated
+              confirmation / reminder emails without changing the public journey.
+            </p>
+            <div className="registration-flow">
+              <span>Register</span><i>→</i><span>Confirmation</span><i>→</i><span>Reminder</span><i>→</i><span>Attend</span>
+            </div>
+          </div>
+
+          <form className="registration-preview" aria-label="Conference registration preview">
+            <div className="form-preview-head">
+              <span>Registration preview</span>
+              <strong>Opens after final approval</strong>
+            </div>
+            <label>Full name<input type="text" disabled placeholder="Your full name" /></label>
+            <label>Email<input type="email" disabled placeholder="you@example.com" /></label>
+            <label>Medical school<input type="text" disabled placeholder="University / medical school" /></label>
+            <label>Year of study<select disabled defaultValue=""><option value="">Select year</option></select></label>
+            <label className="form-full">Accessibility or dietary requirements<textarea disabled rows={4} placeholder="Optional" /></label>
+            <button type="button" disabled>Registration not yet open</button>
+          </form>
+        </div>
+      </section>
+
       <section className="section shell">
         <div className="cta-panel">
           <div>
