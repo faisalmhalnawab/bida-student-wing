@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { impactStats, programmeCards } from "@/data/site";
 
@@ -26,14 +27,32 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="hero-panel">
-            <span className="panel-kicker">The year ahead</span>
-            <h2>From national reach to lasting infrastructure.</h2>
-            <div className="hero-panel-list">
-              <div><span>01</span><p>National Teaching</p></div>
-              <div><span>02</span><p>National Conference</p></div>
-              <div><span>03</span><p>Digital Presence</p></div>
-              <div><span>04</span><p>Research</p></div>
+          <div className="hero-side">
+            <div className="hero-seal-lockup">
+              <Image
+                className="hero-seal"
+                src="/bida-student-wing-logo.webp"
+                alt="BIDA Student Wing"
+                width={154}
+                height={154}
+                priority
+              />
+              <div>
+                <span>British International Doctors&apos; Association</span>
+                <strong>Student Wing</strong>
+                <small>National · Student-led · UK-wide</small>
+              </div>
+            </div>
+
+            <div className="hero-panel">
+              <span className="panel-kicker">The year ahead</span>
+              <h2>From national reach to lasting infrastructure.</h2>
+              <div className="hero-panel-list">
+                <div><span>01</span><p>National Teaching</p></div>
+                <div><span>02</span><p>National Conference</p></div>
+                <div><span>03</span><p>Digital Presence</p></div>
+                <div><span>04</span><p>Research</p></div>
+              </div>
             </div>
           </div>
         </div>
