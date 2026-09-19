@@ -1,5 +1,11 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "About & Leadership",
+  description: "Meet BIDA Student Wing, its national structure, leadership and trustees, and how its programmes work together.",
+};
 
 const pillars = [
   {
