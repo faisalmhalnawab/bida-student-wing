@@ -136,6 +136,27 @@ export default function AboutPage() {
         </div>
       </section>
 
+      <section className="section shell delivery-principles-section">
+        <div className="section-heading">
+          <div>
+            <span className="eyebrow">How we deliver</span>
+            <h2>Five principles for the year ahead.</h2>
+          </div>
+          <p>
+            The 2026–27 programme is intended to turn successful activity into
+            repeatable national infrastructure with clear ownership and evidence.
+          </p>
+        </div>
+
+        <div className="delivery-principles-grid">
+          <article><span>01</span><h3>National, not centralised</h3><p>Local representatives extend reach while standards remain nationally coordinated.</p></article>
+          <article><span>02</span><h3>Accessible by design</h3><p>Programmes remain digitally reachable and inclusive across stages and institutions.</p></article>
+          <article><span>03</span><h3>Quality before volume</h3><p>Each activity needs a clear purpose, an accountable owner and evidence of delivery.</p></article>
+          <article><span>04</span><h3>Measured, not merely announced</h3><p>Attendance, reach, feedback, outputs and risks are recorded prospectively.</p></article>
+          <article><span>05</span><h3>Built to continue</h3><p>Templates, contacts, data, permissions and lessons are transferred through formal handover.</p></article>
+        </div>
+      </section>
+
       <section className="section shell" id="leadership">
         <div className="section-heading">
           <div>
