@@ -13,7 +13,7 @@ export const impactStats = [
   { value: "35", label: "UK medical schools reached · 2025/26" },
   { value: "47", label: "national teaching sessions · 2025/26" },
   { value: "50+", label: "live teaching hours · 2025/26" },
-  { value: "135+", label: "student representatives · 2025/26" },
+  { value: "135+", label: "student representatives across 27 schools · 2025/26" },
 ] as const;
 
 export const programmeCards = [
