@@ -1,4 +1,10 @@
+import type { Metadata } from "next";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Opportunities",
+  description: "National BIDA Student Wing representative, committee, teaching and research opportunities for medical students.",
+};
 
 const routes = [
   ["Medical-school representatives", "Extend national reach locally and help students find teaching, research, conference and leadership opportunities.", "Representative network"],
