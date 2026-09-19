@@ -4109,3 +4109,129 @@ div[id] {
     padding:24px;
   }
 }
+
+
+/* ===== Source-aligned programme principles and measures ===== */
+.delivery-principles-grid {
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:10px;
+}
+
+.delivery-principles-grid article {
+  min-height:245px;
+  padding:22px;
+  display:flex;
+  flex-direction:column;
+  border:1px solid var(--line);
+  border-radius:18px;
+  background:white;
+}
+
+.delivery-principles-grid article:first-child {
+  color:white;
+  background:var(--navy-950);
+  border-color:var(--navy-950);
+}
+
+.delivery-principles-grid span {
+  color:var(--teal);
+  font-size:.68rem;
+  font-weight:900;
+}
+
+.delivery-principles-grid article:first-child span {
+  color:#8ce1df;
+}
+
+.delivery-principles-grid h3 {
+  margin:auto 0 10px;
+  font-size:1.3rem;
+  line-height:1.08;
+  letter-spacing:-.035em;
+}
+
+.delivery-principles-grid p {
+  margin:0;
+  color:var(--muted);
+  font-size:.82rem;
+  line-height:1.6;
+}
+
+.delivery-principles-grid article:first-child p {
+  color:rgba(255,255,255,.58);
+}
+
+.teaching-measures-section,
+.conference-targets-section {
+  padding:100px 0;
+  color:white;
+  background:
+    radial-gradient(circle at 88% 14%,rgba(15,174,181,.18),transparent 25%),
+    #0b2433;
+}
+
+.conference-targets-section {
+  background:
+    radial-gradient(circle at 88% 14%,rgba(242,178,51,.13),transparent 25%),
+    #0b2433;
+}
+
+.teaching-measures-section .section-heading p,
+.conference-targets-section .section-heading p {
+  color:rgba(255,255,255,.56);
+}
+
+.measure-grid {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:10px;
+}
+
+.measure-grid article {
+  min-height:150px;
+  padding:20px;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-end;
+  border:1px solid rgba(255,255,255,.10);
+  border-radius:18px;
+  background:rgba(255,255,255,.045);
+}
+
+.measure-grid strong {
+  color:var(--gold);
+  font-size:2rem;
+  line-height:1;
+  letter-spacing:-.05em;
+}
+
+.measure-grid span {
+  margin-top:9px;
+  color:rgba(255,255,255,.60);
+  font-size:.8rem;
+  line-height:1.45;
+}
+
+.conference-measure-grid {
+  grid-template-columns:repeat(4,1fr);
+}
+
+@media (max-width:1040px) {
+  .delivery-principles-grid {
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .conference-measure-grid,
+  .measure-grid {
+    grid-template-columns:repeat(2,1fr);
+  }
+}
+
+@media (max-width:760px) {
+  .delivery-principles-grid,
+  .conference-measure-grid,
+  .measure-grid {
+    grid-template-columns:1fr;
+  }
+}
