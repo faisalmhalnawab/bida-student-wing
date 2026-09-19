@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 
 export default function robots(): MetadataRoute.Robots {
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://bida-student-wing.vercel.app";
   const indexingEnabled = process.env.SITE_INDEXING_ENABLED === "true";
 
   if (!indexingEnabled) {
@@ -17,6 +18,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://bida-student-wing.vercel.app/sitemap.xml",
+    sitemap: `${siteUrl}/sitemap.xml`,
   };
 }
