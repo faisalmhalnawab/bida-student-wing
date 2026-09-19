@@ -5,6 +5,14 @@ import { navItems } from "@/data/site";
 export function Footer() {
   return (
     <footer className="site-footer">
+      <div className="shell footer-topline">
+        <div>
+          <span className="eyebrow light">BIDA Student Wing</span>
+          <strong>One trusted digital front door.</strong>
+        </div>
+        <Link className="footer-cta" href="/opportunities">Get involved →</Link>
+      </div>
+
       <div className="shell footer-grid">
         <div>
           <div className="brand footer-brand">
@@ -48,6 +56,8 @@ export function Footer() {
         <div>
           <p className="footer-heading">Organisation</p>
           <div className="footer-links">
+            <Link href="/about#leadership">Leadership</Link>
+            <Link href="/about#trustees">Trustees</Link>
             <Link href="/contact">Contact</Link>
             <Link href="/privacy">Privacy</Link>
           </div>
@@ -56,7 +66,7 @@ export function Footer() {
 
       <div className="shell footer-bottom">
         <span>© {new Date().getFullYear()} BIDA Student Wing</span>
-        <span>2026–27 digital programme</span>
+        <span>National programme · 2026–27</span>
       </div>
     </footer>
   );
