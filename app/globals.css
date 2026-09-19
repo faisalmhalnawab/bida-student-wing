@@ -3927,3 +3927,11 @@ textarea:focus-visible {
 @media (max-width:760px) {
   .live-event-grid { grid-template-columns:1fr; }
 }
+
+
+/* Keep in-page navigation clear of the sticky header. */
+section[id],
+article[id],
+div[id] {
+  scroll-margin-top: 96px;
+}
