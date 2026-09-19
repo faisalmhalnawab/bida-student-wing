@@ -55,6 +55,8 @@ export default function ResearchPage() {
           <article><strong>4</strong><span>practical research-skills workshops</span></article>
           <article><strong>3</strong><span>abstract submissions target</span></article>
           <article><strong>2</strong><span>manuscript submissions target</span></article>
+          <article><strong>Quarterly</strong><span>research clinic or project review forum</span></article>
+          <article><strong>100%</strong><span>active projects with protocol, supervisor and governance determination</span></article>
         </div>
       </section>
 
