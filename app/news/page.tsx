@@ -1,4 +1,10 @@
+import type { Metadata } from "next";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "News",
+  description: "Programme milestones, conference announcements, teaching updates and organisational news from BIDA Student Wing.",
+};
 
 const updates = [
   {
