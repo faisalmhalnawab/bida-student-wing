@@ -78,7 +78,7 @@ export default function EducationPage() {
         </div>
       </section>
 
-      <section className="section shell">
+      <section className="section shell" id="streams">
         <div className="section-heading">
           <div>
             <span className="eyebrow">Three connected streams</span>
@@ -91,7 +91,7 @@ export default function EducationPage() {
         </div>
 
         <div className="stream-grid">
-          <article className="stream-card stream-clinical">
+          <article className="stream-card stream-clinical" id="clinical">
             <span className="stream-number">01</span>
             <span className="stream-label">Clinical UKMLA</span>
             <h3>Clinical knowledge & decision-making</h3>
@@ -105,7 +105,7 @@ export default function EducationPage() {
             </div>
           </article>
 
-          <article className="stream-card stream-osce">
+          <article className="stream-card stream-osce" id="osce">
             <span className="stream-number">02</span>
             <span className="stream-label">OSCE</span>
             <h3>Translate knowledge into performance</h3>
@@ -119,7 +119,7 @@ export default function EducationPage() {
             </div>
           </article>
 
-          <article className="stream-card stream-preclinical">
+          <article className="stream-card stream-preclinical" id="pre-clinical">
             <span className="stream-number">03</span>
             <span className="stream-label">Pre-clinical</span>
             <h3>Foundations connected to clinical practice</h3>
