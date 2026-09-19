@@ -200,11 +200,11 @@ export default function Home() {
         <div className="section-heading">
           <div>
             <span className="eyebrow">The platform</span>
-            <h2>More than a website.</h2>
+            <h2>One trusted digital front door.</h2>
           </div>
           <p>
-            This will become the Student Wing&apos;s central digital home for
-            participation, programme information and institutional memory.
+            One reliable place to understand who we are, what is happening, how
+            to participate and where to find verified Student Wing resources.
           </p>
         </div>
 
