@@ -1,37 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { newsArticles } from "@/data/news";
 
 export const metadata: Metadata = {
   title: "News",
-  description: "Programme milestones, conference announcements, teaching updates and organisational news from BIDA Student Wing.",
+  description:
+    "Programme milestones, conference announcements, teaching updates and organisational news from BIDA Student Wing.",
 };
-
-const updates = [
-  {
-    date: "17 SEP 2026",
-    tag: "Strategy",
-    title: "2026–27 Presidential Programme submitted",
-    body: "The programme sets four strategic pillars: National Teaching, National Conference, Website & Digital Presence, and Research.",
-  },
-  {
-    date: "SEP 2026",
-    tag: "Digital",
-    title: "BIDA Student Wing website hub enters development",
-    body: "The new digital home is being built to bring programme information, events, opportunities, research and resources into one reliable place.",
-  },
-  {
-    date: "2026–27",
-    tag: "Education",
-    title: "National Teaching structured across three connected streams",
-    body: "Clinical UKMLA and OSCE teaching run through the active clinical period, with the new pre-clinical stream planned from February 2027.",
-  },
-  {
-    date: "JAN 2027",
-    tag: "Conference",
-    title: "Sixth National Conference in planning",
-    body: "The next national conference is planned for January 2027, subject to final Executive Committee approval and operational planning.",
-  },
-];
 
 export default function NewsPage() {
   return (
@@ -59,13 +34,20 @@ export default function NewsPage() {
 
       <section className="section shell">
         <div className="news-grid">
-          {updates.map((item, index) => (
-            <article className={index === 0 ? "news-card news-card-featured" : "news-card"} key={item.title}>
-              <div className="news-meta"><span>{item.tag}</span><time>{item.date}</time></div>
+          {newsArticles.map((item, index) => (
+            <Link
+              className={index === 0 ? "news-card news-card-featured" : "news-card"}
+              key={item.slug}
+              href={`/news/${item.slug}`}
+            >
+              <div className="news-meta">
+                <span>{item.tag}</span>
+                <time dateTime={item.dateISO}>{item.date}</time>
+              </div>
               <h2>{item.title}</h2>
-              <p>{item.body}</p>
-              <span className="news-read">Programme update</span>
-            </article>
+              <p>{item.summary}</p>
+              <span className="news-read">Read update →</span>
+            </Link>
           ))}
         </div>
       </section>

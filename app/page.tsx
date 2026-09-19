@@ -265,7 +265,7 @@ export default function Home() {
         </div>
 
         <div className="home-news-grid">
-          <Link className="home-news-card home-news-featured" href="/news">
+          <Link className="home-news-card home-news-featured" href="/news/2026-27-presidential-programme">
             <div><span>Strategy</span><time>17 SEP 2026</time></div>
             <h3>2026–27 Presidential Programme submitted</h3>
             <p>
@@ -274,7 +274,7 @@ export default function Home() {
             </p>
             <strong>Read updates →</strong>
           </Link>
-          <Link className="home-news-card" href="/news">
+          <Link className="home-news-card" href="/news/national-teaching-three-streams">
             <div><span>Education</span><time>2026–27</time></div>
             <h3>National Teaching moves to three connected streams</h3>
             <p>
@@ -283,7 +283,7 @@ export default function Home() {
             </p>
             <strong>Teaching update →</strong>
           </Link>
-          <Link className="home-news-card" href="/news">
+          <Link className="home-news-card" href="/news/sixth-national-conference-planning">
             <div><span>Conference</span><time>JAN 2027</time></div>
             <h3>Sixth National Conference enters planning</h3>
             <p>
