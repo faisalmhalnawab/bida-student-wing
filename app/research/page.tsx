@@ -24,7 +24,7 @@ const training = [
 export default function ResearchPage() {
   return (
     <>
-      <section className="programme-page-hero research-page-hero">
+      <section className="programme-page-hero research-page-hero" id="department">
         <div className="shell programme-page-hero-grid">
           <div>
             <span className="eyebrow light">National Research Department</span>
