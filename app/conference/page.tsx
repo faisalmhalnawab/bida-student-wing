@@ -16,7 +16,7 @@ const conferencePillars = [
 export default function ConferencePage() {
   return (
     <>
-      <section className="conference-hero">
+      <section className="conference-hero" id="overview">
         <div className="shell conference-hero-grid">
           <div>
             <span className="eyebrow light">6th BIDA Student Wing National Conference</span>
@@ -33,7 +33,7 @@ export default function ConferencePage() {
             </div>
           </div>
 
-          <div className="conference-ticket">
+          <div className="conference-ticket" id="register">
             <span className="ticket-label">Conference 06</span>
             <strong>2027</strong>
             <h2>Registration opening later</h2>
@@ -46,7 +46,7 @@ export default function ConferencePage() {
         </div>
       </section>
 
-      <section className="section shell">
+      <section className="section shell" id="programme">
         <div className="section-heading">
           <div>
             <span className="eyebrow">Programme identity</span>
@@ -90,7 +90,7 @@ export default function ConferencePage() {
       </section>
 
       <section className="section shell">
-        <div className="conference-track-grid">
+        <div className="conference-track-grid" id="speakers">
           <article className="conference-track conference-track-dark">
             <span>Programme</span>
             <h3>Speakers, sessions and national partners</h3>
