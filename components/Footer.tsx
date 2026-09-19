@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { navItems } from "@/data/site";
 
@@ -7,10 +8,17 @@ export function Footer() {
       <div className="shell footer-grid">
         <div>
           <div className="brand footer-brand">
-            <span className="brand-mark" aria-hidden="true">B</span>
-            <span>
-              <strong>BIDA</strong>
-              <small>Student Wing</small>
+            <span className="brand-logo footer-logo">
+              <Image
+                src="/bida-student-wing-logo.webp"
+                alt=""
+                width={64}
+                height={64}
+              />
+            </span>
+            <span className="brand-copy">
+              <strong>BIDA Student Wing</strong>
+              <small>British International Doctors&apos; Association</small>
             </span>
           </div>
           <p className="footer-copy">
