@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { navItems } from "@/data/site";
 
@@ -6,10 +7,18 @@ export function Header() {
     <header className="site-header">
       <div className="shell header-inner">
         <Link className="brand" href="/" aria-label="BIDA Student Wing home">
-          <span className="brand-mark" aria-hidden="true">B</span>
-          <span>
-            <strong>BIDA</strong>
-            <small>Student Wing</small>
+          <span className="brand-logo">
+            <Image
+              src="/bida-student-wing-logo.webp"
+              alt=""
+              width={52}
+              height={52}
+              priority
+            />
+          </span>
+          <span className="brand-copy">
+            <strong>BIDA Student Wing</strong>
+            <small>British International Doctors&apos; Association</small>
           </span>
         </Link>
 
