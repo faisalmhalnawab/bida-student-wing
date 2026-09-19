@@ -18,7 +18,7 @@ const routes = [
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const base = "https://bida-student-wing.vercel.app";
+  const base = process.env.NEXT_PUBLIC_SITE_URL || "https://bida-student-wing.vercel.app";
 
   return routes.map((route, index): MetadataRoute.Sitemap[number] => ({
     url: `${base}${route}`,
