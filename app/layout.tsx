@@ -3,6 +3,8 @@ import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://bida-student-wing.vercel.app";
+
 export const metadata: Metadata = {
   title: {
     default: "BIDA Student Wing",
@@ -10,7 +12,7 @@ export const metadata: Metadata = {
   },
   description:
     "BIDA Student Wing — national teaching, research, conference opportunities and professional development for medical students across the UK.",
-  metadataBase: new URL("https://bida-student-wing.vercel.app"),
+  metadataBase: new URL(siteUrl),
   icons: {
     icon: "/bida-student-wing-logo.webp",
     apple: "/bida-student-wing-logo.webp",
