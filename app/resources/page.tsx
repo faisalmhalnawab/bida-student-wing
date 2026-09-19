@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 const resourceAreas = [
   ["Annual reports", "Achievement reports, end-of-year reporting and approved programme summaries."],
   ["Learning resources", "Approved teaching materials and educational resources retained beyond individual sessions."],
@@ -6,6 +7,11 @@ const resourceAreas = [
   ["Research methods", "Approved templates and practical methods support developed by the Research Department."],
   ["Handover & institutional memory", "A structured record of what future committees need to continue the work."],
 ];
+
+export const metadata: Metadata = {
+  title: "Reports & Resources",
+  description: "BIDA Student Wing reports, approved learning resources, policies, conference archives and institutional memory.",
+};
 
 export default function ResourcesPage() {
   return (
