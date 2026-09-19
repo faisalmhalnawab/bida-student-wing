@@ -1,6 +1,52 @@
 import Image from "next/image";
 import Link from "next/link";
-import { navItems } from "@/data/site";
+
+const navGroups = [
+  {
+    label: "About",
+    href: "/about",
+    items: [
+      { label: "Who we are", href: "/about#who-we-are" },
+      { label: "How we work", href: "/about#structure" },
+      { label: "Leadership", href: "/about#leadership" },
+      { label: "Trustees", href: "/about#trustees" },
+    ],
+  },
+  {
+    label: "Education",
+    href: "/education",
+    items: [
+      { label: "National Teaching", href: "/education" },
+      { label: "Clinical UKMLA", href: "/education" },
+      { label: "OSCE", href: "/education" },
+      { label: "Pre-clinical", href: "/education" },
+    ],
+  },
+  { label: "Events", href: "/events" },
+  {
+    label: "Conference",
+    href: "/conference",
+    items: [
+      { label: "Conference overview", href: "/conference" },
+      { label: "Programme", href: "/conference" },
+      { label: "Speakers", href: "/conference" },
+      { label: "Abstracts & registration", href: "/conference" },
+    ],
+  },
+  {
+    label: "Research",
+    href: "/research",
+    items: [
+      { label: "Research Department", href: "/research" },
+      { label: "Projects", href: "/research" },
+      { label: "Research training", href: "/research" },
+      { label: "Apply", href: "/research" },
+    ],
+  },
+  { label: "Opportunities", href: "/opportunities" },
+  { label: "News", href: "/news" },
+  { label: "Resources", href: "/resources" },
+] as const;
 
 export function Header() {
   return (
@@ -23,11 +69,27 @@ export function Header() {
         </Link>
 
         <nav className="desktop-nav" aria-label="Primary navigation">
-          {navItems.map((item) => (
-            <Link key={item.href} href={item.href}>
-              {item.label}
-            </Link>
-          ))}
+          {navGroups.map((item) =>
+            "items" in item ? (
+              <div className="nav-group" key={item.href}>
+                <Link className="nav-parent" href={item.href}>
+                  {item.label}
+                  <span aria-hidden="true">⌄</span>
+                </Link>
+                <div className="nav-dropdown">
+                  {item.items.map((child) => (
+                    <Link key={child.href + child.label} href={child.href}>
+                      {child.label}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            ) : (
+              <Link key={item.href} href={item.href}>
+                {item.label}
+              </Link>
+            )
+          )}
         </nav>
 
         <Link className="header-cta" href="/opportunities">
@@ -37,7 +99,7 @@ export function Header() {
         <details className="mobile-menu">
           <summary aria-label="Open navigation">Menu</summary>
           <nav aria-label="Mobile navigation">
-            {navItems.map((item) => (
+            {navGroups.map((item) => (
               <Link key={item.href} href={item.href}>
                 {item.label}
               </Link>
