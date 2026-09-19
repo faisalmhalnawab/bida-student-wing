@@ -15,6 +15,10 @@ export const metadata: Metadata = {
     icon: "/bida-student-wing-logo.webp",
     apple: "/bida-student-wing-logo.webp",
   },
+  robots:
+    process.env.SITE_INDEXING_ENABLED === "true"
+      ? { index: true, follow: true }
+      : { index: false, follow: false },
   openGraph: {
     title: "BIDA Student Wing",
     description:
