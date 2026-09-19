@@ -126,6 +126,28 @@ export default function ConferencePage() {
         </div>
       </section>
 
+      <section className="conference-targets-section">
+        <div className="shell">
+          <div className="section-heading">
+            <div>
+              <span className="eyebrow light">2027 working targets</span>
+              <h2>Success should be visible after the event as well as on the day.</h2>
+            </div>
+            <p>
+              Targets remain subject to Executive Committee approval, final
+              operational planning and factors outside the Student Wing&apos;s control.
+            </p>
+          </div>
+
+          <div className="measure-grid conference-measure-grid">
+            <article><strong>35+</strong><span>UK medical schools represented</span></article>
+            <article><strong>150+</strong><span>active representatives across 30+ schools</span></article>
+            <article><strong>4+</strong><span>national professional or academic partner bodies</span></article>
+            <article><strong>90%</strong><span>positive overall participant evaluation target</span></article>
+          </div>
+        </div>
+      </section>
+
       <section className="conference-registration-section">
         <div className="shell registration-layout">
           <div>
