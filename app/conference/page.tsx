@@ -33,7 +33,7 @@ export default function ConferencePage() {
             </div>
           </div>
 
-          <div className="conference-ticket" id="register">
+          <div className="conference-ticket">
             <span className="ticket-label">Conference 06</span>
             <strong>2027</strong>
             <h2>Registration opening later</h2>
@@ -126,6 +126,27 @@ export default function ConferencePage() {
         </div>
       </section>
 
+      <section className="abstracts-section" id="abstracts">
+        <div className="shell abstracts-layout">
+          <div>
+            <span className="eyebrow light">Abstract & poster stream</span>
+            <h2>An academic route with transparent review.</h2>
+            <p>
+              The national abstract/poster stream is planned subject to sufficient
+              quality submissions. Detailed criteria and deadlines will be
+              published before submissions open.
+            </p>
+          </div>
+
+          <div className="abstract-process">
+            <article><span>01</span><h3>Published criteria</h3><p>Scope, format, deadlines and eligibility visible before submission.</p></article>
+            <article><span>02</span><h3>Conflict declarations</h3><p>Relevant conflicts recorded as part of the academic process.</p></article>
+            <article><span>03</span><h3>Academic review</h3><p>Submissions reviewed through an agreed and documented process.</p></article>
+            <article><span>04</span><h3>Recognition</h3><p>High-quality work recognised through presentation or poster opportunities.</p></article>
+          </div>
+        </div>
+      </section>
+
       <section className="conference-targets-section">
         <div className="shell">
           <div className="section-heading">
@@ -148,7 +169,7 @@ export default function ConferencePage() {
         </div>
       </section>
 
-      <section className="conference-registration-section">
+      <section className="conference-registration-section" id="register">
         <div className="shell registration-layout">
           <div>
             <span className="eyebrow light">Delegate registration</span>
