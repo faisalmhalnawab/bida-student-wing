@@ -144,22 +144,24 @@ export default function AboutPage() {
 
         <div className="leadership-grid">
           <article className="leadership-card primary-leadership-card">
-            <span className="leadership-role">National President</span>
-            <div className="leadership-placeholder">P</div>
-            <h3>President</h3>
+            <span className="leadership-role">National President · 2026–27</span>
+            <div className="leadership-placeholder">SA</div>
+            <h3>Sam Astanehi</h3>
             <p>
-              Leads the national Student Wing, coordinates strategy and represents
-              the organisation across its core programmes.
+              National President of BIDA Student Wing, leading the 2026–27
+              programme across teaching, conference, digital infrastructure and
+              research.
             </p>
           </article>
 
           <article className="leadership-card primary-leadership-card">
-            <span className="leadership-role">National Vice President</span>
-            <div className="leadership-placeholder">VP</div>
-            <h3>Vice President</h3>
+            <span className="leadership-role">National Vice President · 2026–27</span>
+            <div className="leadership-placeholder">FA</div>
+            <h3>Faisal Al-Nawab</h3>
             <p>
-              Supports national delivery, cross-programme coordination and the
-              Student Wing&apos;s digital and organisational development.
+              National Vice President of BIDA Student Wing, supporting programme
+              delivery, cross-team coordination and the Student Wing&apos;s digital
+              and organisational development.
             </p>
           </article>
 
