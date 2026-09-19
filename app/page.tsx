@@ -2,16 +2,27 @@ import Image from "next/image";
 import Link from "next/link";
 import { impactStats, programmeCards } from "@/data/site";
 
+const programmeMeta = [
+  { className: "programme-card-education", marker: "ED" },
+  { className: "programme-card-conference", marker: "NC" },
+  { className: "programme-card-research", marker: "RS" },
+  { className: "programme-card-opportunities", marker: "OP" },
+];
+
 export default function Home() {
   return (
     <>
       <section className="hero">
+        <div className="hero-grid-lines" aria-hidden="true" />
         <div className="hero-orb hero-orb-one" />
         <div className="hero-orb hero-orb-two" />
         <div className="shell hero-grid">
           <div className="hero-copy">
             <span className="eyebrow light">BIDA Student Wing · 2026–27</span>
-            <h1>Building the next generation of medical leadership.</h1>
+            <h1>
+              Building the next generation
+              <span>of medical leadership.</span>
+            </h1>
             <p>
               National teaching, research, professional development and
               opportunities connecting medical students across the United
@@ -24,6 +35,13 @@ export default function Home() {
               <Link className="button ghost" href="/events">
                 View upcoming events
               </Link>
+            </div>
+            <div className="hero-trust-row" aria-label="Programme focus">
+              <span>UK-wide</span>
+              <i />
+              <span>Student-led</span>
+              <i />
+              <span>Professionally supported</span>
             </div>
           </div>
 
@@ -45,13 +63,16 @@ export default function Home() {
             </div>
 
             <div className="hero-panel">
-              <span className="panel-kicker">The year ahead</span>
+              <div className="panel-heading">
+                <span className="panel-kicker">The year ahead</span>
+                <span className="panel-status">2026–27</span>
+              </div>
               <h2>From national reach to lasting infrastructure.</h2>
               <div className="hero-panel-list">
-                <div><span>01</span><p>National Teaching</p></div>
-                <div><span>02</span><p>National Conference</p></div>
-                <div><span>03</span><p>Digital Presence</p></div>
-                <div><span>04</span><p>Research</p></div>
+                <Link href="/education"><span>01</span><p>National Teaching</p><b>↗</b></Link>
+                <Link href="/conference"><span>02</span><p>National Conference</p><b>↗</b></Link>
+                <Link href="/about"><span>03</span><p>Digital Presence</p><b>↗</b></Link>
+                <Link href="/research"><span>04</span><p>Research</p><b>↗</b></Link>
               </div>
             </div>
           </div>
@@ -60,8 +81,9 @@ export default function Home() {
 
       <section className="impact-strip" aria-label="BIDA Student Wing impact">
         <div className="shell stat-grid">
-          {impactStats.map((stat) => (
+          {impactStats.map((stat, index) => (
             <div className="stat" key={stat.label}>
+              <span className="stat-index">0{index + 1}</span>
               <strong>{stat.value}</strong>
               <span>{stat.label}</span>
             </div>
@@ -69,7 +91,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section shell">
+      <section className="section shell programmes-section">
         <div className="section-heading">
           <div>
             <span className="eyebrow">What we do</span>
@@ -83,79 +105,130 @@ export default function Home() {
 
         <div className="programme-grid">
           {programmeCards.map((card, index) => (
-            <Link className="programme-card" href={card.href} key={card.title}>
+            <Link
+              className={`programme-card ${programmeMeta[index].className}`}
+              href={card.href}
+              key={card.title}
+            >
               <div className="card-topline">
                 <span>{card.eyebrow}</span>
                 <span>0{index + 1}</span>
               </div>
-              <h3>{card.title}</h3>
-              <p>{card.body}</p>
-              <span className="text-link">Explore programme →</span>
+              <div className="programme-symbol" aria-hidden="true">
+                {programmeMeta[index].marker}
+              </div>
+              <div className="programme-card-copy">
+                <h3>{card.title}</h3>
+                <p>{card.body}</p>
+                <span className="text-link">Explore programme <b>→</b></span>
+              </div>
             </Link>
           ))}
         </div>
       </section>
 
-      <section className="section schedule-section">
-        <div className="shell split-grid">
-          <div>
-            <span className="eyebrow">National Teaching 2026–27</span>
-            <h2>A continuous pathway from foundations to examination readiness.</h2>
-            <p className="lead">
-              Teaching is being structured across three connected streams so
-              students can move from foundational science into clinical
-              decision-making and structured OSCE performance.
+      <section className="programme-dashboard">
+        <div className="shell">
+          <div className="dashboard-header">
+            <div>
+              <span className="eyebrow light">National Teaching 2026–27</span>
+              <h2>Three streams. One national pathway.</h2>
+            </div>
+            <p>
+              Teaching connects foundational knowledge, UKMLA clinical learning
+              and structured OSCE practice throughout the academic year.
             </p>
-            <Link className="button dark" href="/education">
-              View teaching programme
-            </Link>
           </div>
 
-          <div className="schedule-list">
-            <article>
-              <span>Clinical UKMLA</span>
-              <strong>Twice weekly</strong>
-              <p>October 2026 – May 2027</p>
+          <div className="dashboard-grid">
+            <article className="timeline-card">
+              <div className="timeline-date">
+                <span>Oct</span>
+                <strong>2026</strong>
+              </div>
+              <div>
+                <span className="timeline-label">Clinical UKMLA</span>
+                <h3>Twice-weekly national clinical teaching</h3>
+                <p>October 2026 – May 2027</p>
+              </div>
+              <span className="timeline-frequency">2× weekly</span>
             </article>
-            <article>
-              <span>OSCE teaching</span>
-              <strong>Weekly</strong>
-              <p>October 2026 – May 2027</p>
+
+            <article className="timeline-card">
+              <div className="timeline-date">
+                <span>Oct</span>
+                <strong>2026</strong>
+              </div>
+              <div>
+                <span className="timeline-label">OSCE</span>
+                <h3>Structured examination and communication practice</h3>
+                <p>October 2026 – May 2027</p>
+              </div>
+              <span className="timeline-frequency">Weekly</span>
             </article>
-            <article>
-              <span>Pre-clinical</span>
-              <strong>Weekly</strong>
-              <p>February – May 2027</p>
+
+            <article className="timeline-card">
+              <div className="timeline-date">
+                <span>Feb</span>
+                <strong>2027</strong>
+              </div>
+              <div>
+                <span className="timeline-label">Pre-clinical</span>
+                <h3>Foundational science linked to clinical application</h3>
+                <p>February 2027 – May 2027</p>
+              </div>
+              <span className="timeline-frequency">Weekly</span>
             </article>
+
+            <Link className="calendar-card" href="/events">
+              <span className="calendar-pulse"><i /></span>
+              <div>
+                <span className="timeline-label">Events hub</span>
+                <h3>One calendar for every Student Wing programme.</h3>
+                <p>
+                  Teaching, conference, research and national opportunities will
+                  appear here as dates are confirmed.
+                </p>
+              </div>
+              <span className="calendar-link">Open events →</span>
+            </Link>
           </div>
         </div>
       </section>
 
-      <section className="section shell">
+      <section className="section shell platform-section">
         <div className="section-heading">
           <div>
-            <span className="eyebrow">Coming next</span>
-            <h2>Your live Student Wing hub.</h2>
+            <span className="eyebrow">The platform</span>
+            <h2>More than a website.</h2>
           </div>
           <p>
-            The public calendar, conference registration, research applications
-            and news publishing will be connected as the digital platform grows.
+            This will become the Student Wing&apos;s central digital home for
+            participation, programme information and institutional memory.
           </p>
         </div>
 
         <div className="feature-grid">
           <article className="feature-card large">
-            <span className="feature-tag">Events</span>
-            <h3>One live calendar.</h3>
-            <p>
-              Teaching, workshops and conference activity in a single reliable
-              place, with registration links and clearly labelled updates.
-            </p>
-            <Link href="/events">Open events hub →</Link>
+            <div className="feature-card-top">
+              <span className="feature-tag">Events</span>
+              <span className="feature-number">01</span>
+            </div>
+            <div>
+              <h3>One live calendar.</h3>
+              <p>
+                Teaching, workshops and conference activity in a single reliable
+                place, with registration links and clearly labelled updates.
+              </p>
+              <Link href="/events">Open events hub →</Link>
+            </div>
           </article>
 
-          <article className="feature-card">
-            <span className="feature-tag">Conference</span>
+          <article className="feature-card feature-card-gold">
+            <div className="feature-card-top">
+              <span className="feature-tag">Conference</span>
+              <span className="feature-number">02</span>
+            </div>
             <h3>Register through BIDA.</h3>
             <p>
               Delegate registration and conference information will live
@@ -164,8 +237,11 @@ export default function Home() {
             <Link href="/conference">Conference hub →</Link>
           </article>
 
-          <article className="feature-card">
-            <span className="feature-tag">Research</span>
+          <article className="feature-card feature-card-teal">
+            <div className="feature-card-top">
+              <span className="feature-tag">Research</span>
+              <span className="feature-number">03</span>
+            </div>
             <h3>Find a project.</h3>
             <p>
               A transparent route for project opportunities, eligibility,
