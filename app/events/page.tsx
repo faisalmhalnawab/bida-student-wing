@@ -1,4 +1,10 @@
+import type { Metadata } from "next";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Events",
+  description: "BIDA Student Wing teaching, conference, research and national programme milestones in one events hub.",
+};
 
 const milestones = [
   { date: "03 OCT 2026", type: "National Teaching", title: "Clinical programme begins", body: "The working UKMLA clinical schedule begins its Medicine phase." },
