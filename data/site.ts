@@ -10,10 +10,10 @@ export const navItems = [
 ] as const;
 
 export const impactStats = [
-  { value: "35", label: "UK medical schools reached" },
-  { value: "47", label: "national teaching sessions" },
-  { value: "50+", label: "live teaching hours" },
-  { value: "135+", label: "student representatives" },
+  { value: "35", label: "UK medical schools reached · 2025/26" },
+  { value: "47", label: "national teaching sessions · 2025/26" },
+  { value: "50+", label: "live teaching hours · 2025/26" },
+  { value: "135+", label: "student representatives · 2025/26" },
 ] as const;
 
 export const programmeCards = [
