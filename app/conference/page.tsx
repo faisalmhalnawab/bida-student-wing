@@ -1,4 +1,10 @@
+import type { Metadata } from "next";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "National Conference",
+  description: "The 6th BIDA Student Wing National Conference, planned for January 2027, with programme, abstracts and delegate information.",
+};
 
 const conferencePillars = [
   ["Professional formation", "Supporting the transition from medical student to doctor."],
