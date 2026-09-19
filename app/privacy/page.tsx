@@ -1,4 +1,11 @@
 import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Privacy & Data Protection",
+  description:
+    "Privacy and data-protection information for the BIDA Student Wing website and future online services.",
+};
+
 export default function PrivacyPage() {
   return (
     <>
@@ -23,11 +30,6 @@ export default function PrivacyPage() {
           </div>
         </div>
       </section>
-
-export const metadata: Metadata = {
-  title: "Privacy & Data Protection",
-  description: "Privacy and data-protection information for the BIDA Student Wing website and future online services.",
-};
 
       <section className="section shell privacy-layout">
         <aside className="privacy-index">
