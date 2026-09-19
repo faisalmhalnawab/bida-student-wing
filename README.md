@@ -23,10 +23,15 @@ Digital home for the BIDA Student Wing 2026–27 programme.
 - Reports & Resources
 - Contact
 - Privacy & Data Protection
+- Cookies
+- Accessibility
+- Website use
 
 ## Current state
 
 The public-facing information architecture and visual system are implemented.
+The project builds on Next.js 16.3.5 and the CI pipeline runs dependency audit,
+TypeScript validation and a production build on every push to main.
 Programme content is based on the 2026–27 BIDA Student Wing strategic programme
 and the agreed website meeting brief.
 
@@ -66,3 +71,12 @@ Then open `http://localhost:3000`.
 
 The `main` branch is connected to Vercel. Commits to `main` trigger a new
 deployment automatically.
+
+
+## Search indexing
+
+The review deployment is intentionally `noindex` by default. Set
+`SITE_INDEXING_ENABLED=true` only after BIDA has signed off the public launch.
+
+Set `NEXT_PUBLIC_SITE_URL` to the final BIDA domain/subdomain before launch so
+canonical site metadata, sitemap output and robots references use the official URL.
