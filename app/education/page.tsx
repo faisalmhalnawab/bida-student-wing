@@ -189,6 +189,30 @@ export default function EducationPage() {
         </div>
       </section>
 
+      <section className="teaching-measures-section">
+        <div className="shell">
+          <div className="section-heading">
+            <div>
+              <span className="eyebrow light">2026–27 measures</span>
+              <h2>Measured by delivery, not announcements.</h2>
+            </div>
+            <p>
+              These are accountable programme commitments rather than guarantees
+              of outcomes that depend on external speakers or other third parties.
+            </p>
+          </div>
+
+          <div className="measure-grid">
+            <article><strong>12+</strong><span>pre-clinical sessions planned</span></article>
+            <article><strong>22 / 24</strong><span>minimum clinical specialty blocks target</span></article>
+            <article><strong>90%</strong><span>feedback coverage target</span></article>
+            <article><strong>90%</strong><span>Good / Very Good or highly relevant learner target</span></article>
+            <article><strong>25+</strong><span>medical schools engagement target</span></article>
+            <article><strong>≤ 6 weeks</strong><span>faculty certificate issue target after verified delivery</span></article>
+          </div>
+        </div>
+      </section>
+
       <section className="education-cta">
         <div className="shell education-cta-inner">
           <div>
