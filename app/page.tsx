@@ -252,6 +252,49 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="section shell home-news-section">
+        <div className="section-heading">
+          <div>
+            <span className="eyebrow">Latest updates</span>
+            <h2>What is moving across the Student Wing.</h2>
+          </div>
+          <p>
+            Strategic milestones, teaching developments and conference updates
+            are published here as the 2026–27 programme progresses.
+          </p>
+        </div>
+
+        <div className="home-news-grid">
+          <Link className="home-news-card home-news-featured" href="/news">
+            <div><span>Strategy</span><time>17 SEP 2026</time></div>
+            <h3>2026–27 Presidential Programme submitted</h3>
+            <p>
+              Four connected pillars set the direction for National Teaching,
+              Conference, Digital Presence and Research.
+            </p>
+            <strong>Read updates →</strong>
+          </Link>
+          <Link className="home-news-card" href="/news">
+            <div><span>Education</span><time>2026–27</time></div>
+            <h3>National Teaching moves to three connected streams</h3>
+            <p>
+              Clinical UKMLA, weekly OSCE teaching and a new pre-clinical stream
+              form one national learning pathway.
+            </p>
+            <strong>Teaching update →</strong>
+          </Link>
+          <Link className="home-news-card" href="/news">
+            <div><span>Conference</span><time>JAN 2027</time></div>
+            <h3>Sixth National Conference enters planning</h3>
+            <p>
+              Programme, speakers, abstracts and delegate registration will be
+              published through the Student Wing hub.
+            </p>
+            <strong>Conference update →</strong>
+          </Link>
+        </div>
+      </section>
+
       <section className="section shell">
         <div className="cta-panel">
           <div>
