@@ -1,4 +1,10 @@
+import type { Metadata } from "next";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "National Teaching",
+  description: "Explore the BIDA Student Wing National Teaching Programme: pre-clinical, UKMLA clinical and OSCE teaching for 2026–27.",
+};
 
 const phases = [
   {
