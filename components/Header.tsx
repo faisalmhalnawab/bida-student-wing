@@ -30,7 +30,8 @@ const navGroups = [
       { label: "Conference overview", href: "/conference#overview" },
       { label: "Programme", href: "/conference#programme" },
       { label: "Speakers", href: "/conference#speakers" },
-      { label: "Abstracts & registration", href: "/conference#abstracts" },
+      { label: "Abstracts", href: "/conference#abstracts" },
+      { label: "Registration", href: "/conference#register" },
     ],
   },
   {
@@ -38,7 +39,7 @@ const navGroups = [
     href: "/research",
     items: [
       { label: "Research Department", href: "/research#department" },
-      { label: "Projects", href: "/research#pathway" },
+      { label: "Projects", href: "/research#projects" },
       { label: "Research training", href: "/research#training" },
       { label: "Apply", href: "/research#apply" },
     ],
