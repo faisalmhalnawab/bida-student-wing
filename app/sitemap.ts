@@ -1,21 +1,27 @@
 import type { MetadataRoute } from "next";
-import { sectionContent } from "@/data/site";
+
+const routes = [
+  "",
+  "/about",
+  "/education",
+  "/events",
+  "/conference",
+  "/research",
+  "/opportunities",
+  "/news",
+  "/resources",
+  "/contact",
+  "/privacy",
+  "/accessibility",
+];
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = "https://bida-student-wing.vercel.app";
 
-  return [
-    {
-      url: base,
-      lastModified: new Date(),
-      changeFrequency: "weekly",
-      priority: 1,
-    },
-    ...Object.keys(sectionContent).map((section) => ({
-      url: `${base}/${section}`,
-      lastModified: new Date(),
-      changeFrequency: "monthly" as const,
-      priority: 0.7,
-    })),
-  ];
+  return routes.map((route, index) => ({
+    url: `${base}${route}`,
+    lastModified: new Date(),
+    changeFrequency: index === 0 ? "weekly" : "monthly",
+    priority: index === 0 ? 1 : 0.7,
+  }));
 }
