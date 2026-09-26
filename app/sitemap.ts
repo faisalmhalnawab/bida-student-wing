@@ -11,6 +11,8 @@ const routes = [
   "/opportunities",
   "/news",
   "/resources",
+  "/pre-clinical-notes",
+  "/pre-clinical-notes/physiology",
   "/contact",
   "/privacy",
   "/accessibility",
