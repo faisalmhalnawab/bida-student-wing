@@ -131,6 +131,9 @@ export default function EducationPage() {
             <div className="stream-meta">
               <span>Years 1–2 focus</span><span>Weekly</span><span>Clinically applied</span>
             </div>
+            <Link className="stream-resource-link" href="/pre-clinical-notes">
+              Open Pre-Clinical Notes →
+            </Link>
           </article>
         </div>
       </section>
