@@ -5831,3 +5831,15 @@ div[id] {
     padding: 26px 22px;
   }
 }
+
+
+.stream-resource-link {
+  margin-top: 18px;
+  color: #65439e;
+  font-size: .75rem;
+  font-weight: 900;
+}
+
+.stream-resource-link:hover {
+  text-decoration: underline;
+}
