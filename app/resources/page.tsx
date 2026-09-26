@@ -10,9 +10,10 @@ const resourceAreas = [
   },
   {
     title: "Learning resources",
-    body: "Approved teaching materials and educational resources retained beyond individual sessions.",
-    status: "Publishing as materials are approved",
-    state: "planned",
+    body: "Pre-clinical notes and approved educational resources rebuilt for online study.",
+    status: "Pre-Clinical Notes now live",
+    state: "live",
+    href: "/pre-clinical-notes",
   },
   {
     title: "Policies & governance",
